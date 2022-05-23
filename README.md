@@ -16,4 +16,9 @@ This project has the following features:
 
 - 5.Todo list management
 
-You will need to register to start testing this website.
+I use developer Plan $0 CORS enabled for localhost https://newsapi.org/pricing 
+with key API :"830b457d706743e9b3af3662d9c2bbf6"
+
+So this API works only in local host.
+You need to create a local host environment before testing "get news feature" of this website.
+Or not 426 error will appear. sorry about that...
