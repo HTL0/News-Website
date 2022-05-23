@@ -1,19 +1,19 @@
 #Hi, I’m HOANG THE LONG
 
-#This is News-Website with integrated todo list management feature
+This is News-Website with integrated todo list management feature
 
-#This project using HTML, CSS, BOOTSTRAP, API from "newsapi.org"(defalut location is Japan), JAVASCRIPT(OOP and Asynchronous)
+This project using HTML, CSS, BOOTSTRAP, API from "newsapi.org"(defalut location is Japan), JAVASCRIPT(OOP and Asynchronous)
 
-#This project has the following features:
+This project has the following features:
 
-#1.Register
+- 1.Register
 
-#2.Login
+- 2.Login
 
-#3.Get news
+- 3.Get news
 
-#4.Setting news
+- 4.Setting news
 
-#5.Todo list management
+- 5.Todo list management
 
-#-You will need to register to start testing this website.
+You will need to register to start testing this website.
