@@ -12,7 +12,7 @@ This project has the following features:
 
 - 3.Get news
 
-- 4.Setting news
+- 4.Setting news change category
 
 - 5.Todo list management
 
