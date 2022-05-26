@@ -1,4 +1,4 @@
-#Hi, I’m HOANG THE LONG
+#Hi, I’m LONG
 
 This is News-Website with integrated todo list management feature
 
