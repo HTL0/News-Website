@@ -16,7 +16,7 @@
          if(Category !== undefined){
             this.Category = Category;
          }else{
-            this.Category = "business";
+            this.Category = "Business";
          }
     }
 
