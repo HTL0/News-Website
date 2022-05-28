@@ -19,11 +19,15 @@ class Task {
 //Check browser has support localStorage
 //Get the user data form localStorage 
 let user;
+
 if (typeof(Storage) !== "undefined") {
     const Obj = getFromStorage ("USER");
     if(Obj !== null){
       user = parseUser(Obj);
-    }else console.log("get User error");
+    }else {
+        alert("You need to login to use this page!");//check user login.
+        window.location.href = '../pages/login.html';
+    }
 
 //Get task list form localStorage
     const taskList = getFromStorage("taskList");
@@ -38,6 +42,8 @@ if (typeof(Storage) !== "undefined") {
     }else console.log("No Task data in local storage!");
     console.log(localStorage);
 }else {console.log("Sorry! No Web Storage support..");}
+//check user login
+
 
 //Add button event, check if the task name inputed or not
 btnAdd.addEventListener("click", function(){
@@ -72,6 +78,7 @@ function DeleteAndCheckTask(todoList){
         let index
 
         //Delete the task
+        //if click "span" element, select index span element form "li" element
         if(e.target.nodeName == "SPAN"){
             index = Array.from(todoList.children).indexOf(e.target.parentNode);
             if (confirm("Are you sure?")) {
@@ -82,7 +89,8 @@ function DeleteAndCheckTask(todoList){
             }                
         }
 
-        //Check the task is done or not 
+        //Check the task is done or not
+        //if click "li" element, select index form ul element array
         if(e.target.nodeName == "LI"){
             index = (Array.from(todoList.children).indexOf(e.target));
             if(confirm(`${todoArr[index].task} is done ?`)){
@@ -105,5 +113,6 @@ function DeleteAndCheckTask(todoList){
 //         saveToStorage("taskList", todoArr);
 //         renderTaskList(todoArr);
 // }
+
 
 

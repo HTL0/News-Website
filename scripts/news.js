@@ -16,7 +16,10 @@ if (typeof(Storage) !== "undefined") {
       //call render news page function
       btnStatus(pageNum);
 
-    }else console.log("get User error");
+    }else{
+      alert("You need to login to use this page!");//check user login.
+      window.location.href = '../pages/login.html';
+    }
     console.log(localStorage);
 }else {console.log("Sorry! No Web Storage support..");}
 
@@ -37,7 +40,7 @@ function btnStatus(pageNum){
       btnNext.hidden = false;
       btnPrev.hidden = false;
       }
-    }).catch(err => { console.log(err);});
+    }).catch(err =>  console.log(err));
 }
 
 //Next button click event
@@ -51,4 +54,6 @@ btnPrev.addEventListener("click", function(){
   pageNum.innerHTML = Number(pageNum.innerHTML) - 1 ;  
   btnStatus(pageNum);
 })
+
+
 

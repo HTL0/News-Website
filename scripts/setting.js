@@ -11,9 +11,16 @@ if (typeof(Storage) !== "undefined") {
     if(Obj !== null){
       //Call convert data localStorage -> class instance function
       user = parseUser(Obj);
-    }else console.log("get User error");
+    }else{
+      alert("You need to login to use this page!");//check user login.
+      window.location.href = '../pages/login.html';
+    }
     console.log(localStorage);
 }else {console.log("Sorry! No Web Storage support..");}
+
+//appear user setting pagesize
+inputPageSize.value = user.pageSize;
+
 
 //Setting button event, check page size inputed or not
 //Call the user setting function
@@ -26,3 +33,9 @@ settingBtn.addEventListener("click", function(){
     window.location.href = '../pages/news.html';
   }else alert("please input News per page !");
 })
+
+//check user login
+if(user == null){
+  alert("You need to login to use this page!");
+  window.location.href = '../pages/login.html';
+}

@@ -30,7 +30,7 @@ function checkUserNameExited(userArray){
 //Valadate register form function
 //Call Check the user already exists function
 function Validate(inputFirstName, inputLastName, inputUserName, inputPassword, inputPasswordConfirm){
-    const regex = '^[a-z0-9_-]{8,}$';
+    const regex = '^[a-z0-9_-]{8,}$'; //Check password "over 8 characters with uppercase, lowercase and number" with regex
     if(inputFirstName.value == "" || inputLastName.value == "" || inputUserName.value == "" || inputPassword.value == "" || inputPasswordConfirm.value == ""){
         alert("Please, input into form register !");
     }else if(checkUserNameExited(userArray)){

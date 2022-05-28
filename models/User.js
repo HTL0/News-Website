@@ -49,5 +49,28 @@ getNew = async function(Country, Category, pageSize, Page, apiKey){
         console.error(err);
     }
 }
+
+//Search API form newsApi
+search = async function(Query, Page, apiKey){
+    try{
+      const res = await fetch(`https://newsapi.org/v2/everything?q=${Query}&sortBy=popularity&pageSize=${this.pageSize}&page=${Page}&apiKey=${apiKey}`);
+      const dataSearch = await res.json();
+    //   console.log(dataSearch);
+    //   newsContainer.innerHTML = "";
+    //   for(let i = 0; i < dataSearch.articles.length; i++){
+    //     // console.log(dataSearch.articles[i]);
+    //     const divTag = document.createElement("div");
+    //     divTag.style = "height: 300px; margin-bottom: 25px; border: 1px groove black;";
+    //     divTag.innerHTML = `<img style = "height: 300px; width:300px; float: left; margin-right: 20px" src= "${dataSearch.articles[i].urlToImage}" arl = "">
+    //                        <h5>${dataSearch.articles[i].title}</h5>
+    //                        <p>${dataSearch.articles[i].description}</p>
+    //                        <button class="btn btn-primary" ><a href="${dataSearch.articles[i].url}" style = "color: white">View</a></button>`;
+    //     content.appendChild(divTag);
+    //   }
+      return dataSearch;
+    }catch(error){
+      console.log(error);
+    }
+  }
 }
 
