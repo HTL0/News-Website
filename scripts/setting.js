@@ -18,9 +18,9 @@ if (typeof(Storage) !== "undefined") {
     console.log(localStorage);
 }else {console.log("Sorry! No Web Storage support..");}
 
-//appear user setting pagesize
+//appear user setting default value of pagesize and Category
 inputPageSize.value = user.pageSize;
-
+inputCategory.value = user.Category;
 
 //Setting button event, check page size inputed or not
 //Call the user setting function
