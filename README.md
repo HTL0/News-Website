@@ -28,7 +28,7 @@ Or not 426 error will appear. sorry about that...
 - firstName and lastName (username and last name)
 - username
 - password
-### 2. Register: new user creation function
+### 2. Register:
 - To manage users, use an array called userArr, this array will contain Instances created from Class User
 - save this userArray to localStorage
 - Every time go to the Register page, will need to reload userArr from Localstorage.
