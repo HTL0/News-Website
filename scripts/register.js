@@ -61,6 +61,7 @@ registerBtn.addEventListener("click", function(){
         userArray.push(parseUser(userData));
         saveToStorage("USER_ARRAY", userArray);
         console.log(userArray);
+        alert(`registration is completed.`)
         window.location.href = '../pages/login.html';
     }
 })
